@@ -1,0 +1,8 @@
+.bundle/
+log/**/*
+pkg/
+config/env.development.yml
+coverage/**/*
+/tmp/*
+lefthook-local.yml
+.idea/**/*
