@@ -1,0 +1,31 @@
+# http://sequel.jeremyevans.net/rdoc/files/doc/opening_databases_rdoc.html
+#
+
+<% default_url = ENV.fetch('DATABASE_URL', 'postgres://localhost/vacancy_scout') %>
+<% uri = URI.parse(default_url) %>
+<% database = uri.path.to_s.split("/")[1] || "vacancy_scout" %>
+
+default: &config
+  adapter: postgresql
+  encoding: unicode
+  prepared_statements: false
+  max_connections: <%= ENV.fetch("THREADS") { 10 } %>
+  <%= "database: #{database}" %>
+  <%= "username: #{uri.user}" if uri.user %>
+  <%= "password: '#{uri.password}'" if uri.password %>
+  <%= "host: #{uri.host}" if uri.host && uri.host != "localhost" %>
+  <%= "port: #{uri.port}" if uri.port %>
+
+development:
+  primary:
+    <<: *config
+    database: <%= database + '_development' %>
+
+test:
+  primary:
+    <<: *config
+    database: <%= database + '_test' %>
+
+production:
+  primary:
+    <<: *config

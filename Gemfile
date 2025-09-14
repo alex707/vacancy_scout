@@ -5,10 +5,15 @@ gem 'rack-console'
 
 gem 'sequel'
 gem 'sequel_pg', require: 'sequel'
+gem 'sequel_tools'
 
 gem 'oj'
 
 gem 'zeitwerk'
+
+gem 'rake'
+
+gem 'rack-cors'
 
 group :development, :test do
   gem 'factory_bot'
