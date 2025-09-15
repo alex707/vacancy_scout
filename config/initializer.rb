@@ -18,3 +18,9 @@ APP_LOADER = Zeitwerk::Loader.new
 APP_LOADER.ignore("#{APP_ROOT}/config/**/*")
 APP_LOADER.ignore("#{APP_ROOT}/db/**/*")
 APP_LOADER.ignore("#{APP_ROOT}/bin/**/*")
+APP_LOADER.ignore("#{APP_ROOT}/spec/**/*")
+
+[
+  "#{APP_ROOT}/app/models",
+  "#{APP_ROOT}/app/services",
+].each(&APP_LOADER.method(:push_dir))

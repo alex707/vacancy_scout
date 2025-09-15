@@ -15,8 +15,11 @@ gem 'rake'
 
 gem 'rack-cors'
 
+gem 'httpx'
+
 group :development, :test do
   gem 'factory_bot'
+  gem 'byebug'
 
   gem 'rubycritic'
 
