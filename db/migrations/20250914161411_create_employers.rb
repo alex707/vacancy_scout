@@ -8,6 +8,8 @@ Sequel.migration do
       String :industry_type
       String :site_url
       String :area
+      DateTime :created_at, null: false, index: true
+      DateTime :updated_at, null: false
     end
   end
 end

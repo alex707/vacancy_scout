@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 9HiuTSsNUmQehezt3qo8WQ0lmqTIsbIQDeHv6NWNIE0nwoiojc634j9xEPcNJTv
+\restrict 25dbhckB1nxYYP9wqrC4Seivl3lA1Xb7DgXbPKqLoSYpnKaFP4LnJXHR7CiLOjN
 
 -- Dumped from database version 14.11 (Homebrew)
 -- Dumped by pg_dump version 16.10 (Homebrew)
@@ -39,7 +39,9 @@ CREATE TABLE public.employers (
     description text,
     industry_type text,
     site_url text,
-    area text
+    area text,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
 );
 
 
@@ -129,6 +131,13 @@ ALTER TABLE ONLY public.vacancies
 
 
 --
+-- Name: employers_created_at_index; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX employers_created_at_index ON public.employers USING btree (created_at);
+
+
+--
 -- Name: employers_hhru_id_index; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -160,7 +169,7 @@ CREATE UNIQUE INDEX vacancies_hhru_id_index ON public.vacancies USING btree (hhr
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 9HiuTSsNUmQehezt3qo8WQ0lmqTIsbIQDeHv6NWNIE0nwoiojc634j9xEPcNJTv
+\unrestrict 25dbhckB1nxYYP9wqrC4Seivl3lA1Xb7DgXbPKqLoSYpnKaFP4LnJXHR7CiLOjN
 
 
 
@@ -168,7 +177,7 @@ CREATE UNIQUE INDEX vacancies_hhru_id_index ON public.vacancies USING btree (hhr
 -- PostgreSQL database dump
 --
 
-\restrict PwFttz583btfIbYp1ZkEAlWoP15LKuKTM9xXRcwzaSgtEkOqMKXuUKqYUrj4o20
+\restrict obdJgvX1rBdHWPZCbke3QbWvW6PLmjy1wqeh9mKJnec8KIij7czSs0197zhlhrD
 
 -- Dumped from database version 14.11 (Homebrew)
 -- Dumped by pg_dump version 16.10 (Homebrew)
@@ -196,5 +205,5 @@ INSERT INTO public.schema_migrations VALUES ('20250915150552_create_vacancies.rb
 -- PostgreSQL database dump complete
 --
 
-\unrestrict PwFttz583btfIbYp1ZkEAlWoP15LKuKTM9xXRcwzaSgtEkOqMKXuUKqYUrj4o20
+\unrestrict obdJgvX1rBdHWPZCbke3QbWvW6PLmjy1wqeh9mKJnec8KIij7czSs0197zhlhrD
 
