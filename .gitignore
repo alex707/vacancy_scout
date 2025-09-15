@@ -6,3 +6,4 @@ coverage/**/*
 /tmp/*
 lefthook-local.yml
 .idea/**/*
+.byebug_history

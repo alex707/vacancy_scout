@@ -1,5 +1,6 @@
 require File.expand_path('../config/boot', __FILE__)
 require File.expand_path('../config/initializer', __FILE__)
+require File.expand_path('../config/constants', __FILE__)
 
 APP_LOADER.enable_reloading if ENV['RACK_ENV'] == 'development'
 APP_LOADER.setup
