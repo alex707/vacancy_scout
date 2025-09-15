@@ -32,6 +32,10 @@ GEM
       descendants_tracker (~> 0.0.1)
     concurrent-ruby (1.3.5)
     connection_pool (2.5.4)
+    database_cleaner-core (2.0.1)
+    database_cleaner-sequel (2.0.2)
+      database_cleaner-core (~> 2.0.0)
+      sequel
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.6.2)
@@ -184,6 +188,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  database_cleaner-sequel
   factory_bot
   httpx
   oj

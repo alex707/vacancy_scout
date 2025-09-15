@@ -22,5 +22,6 @@ APP_LOADER.ignore("#{APP_ROOT}/spec/**/*")
 
 [
   "#{APP_ROOT}/app/models",
+  "#{APP_ROOT}/app/components",
   "#{APP_ROOT}/app/services",
 ].each(&APP_LOADER.method(:push_dir))

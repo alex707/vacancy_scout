@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 25dbhckB1nxYYP9wqrC4Seivl3lA1Xb7DgXbPKqLoSYpnKaFP4LnJXHR7CiLOjN
+\restrict 2W41raKqBN0b5EkGkfOmGTqUGOqpGgchzXO677Yvx2nz40jEPXRxBKPWQ4EPdbC
 
 -- Dumped from database version 14.11 (Homebrew)
 -- Dumped by pg_dump version 16.10 (Homebrew)
@@ -36,6 +36,7 @@ SET default_table_access_method = heap;
 CREATE TABLE public.employers (
     id integer NOT NULL,
     hhru_id bigint,
+    name text,
     description text,
     industry_type text,
     site_url text,
@@ -169,7 +170,7 @@ CREATE UNIQUE INDEX vacancies_hhru_id_index ON public.vacancies USING btree (hhr
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 25dbhckB1nxYYP9wqrC4Seivl3lA1Xb7DgXbPKqLoSYpnKaFP4LnJXHR7CiLOjN
+\unrestrict 2W41raKqBN0b5EkGkfOmGTqUGOqpGgchzXO677Yvx2nz40jEPXRxBKPWQ4EPdbC
 
 
 
@@ -177,7 +178,7 @@ CREATE UNIQUE INDEX vacancies_hhru_id_index ON public.vacancies USING btree (hhr
 -- PostgreSQL database dump
 --
 
-\restrict obdJgvX1rBdHWPZCbke3QbWvW6PLmjy1wqeh9mKJnec8KIij7czSs0197zhlhrD
+\restrict Tc9qcj32YJfLj7kL6E05Ko63MqRCSnuMyYpkfSiYyvzL5jffx1Jkqt87HqVim0t
 
 -- Dumped from database version 14.11 (Homebrew)
 -- Dumped by pg_dump version 16.10 (Homebrew)
@@ -205,5 +206,5 @@ INSERT INTO public.schema_migrations VALUES ('20250915150552_create_vacancies.rb
 -- PostgreSQL database dump complete
 --
 
-\unrestrict obdJgvX1rBdHWPZCbke3QbWvW6PLmjy1wqeh9mKJnec8KIij7czSs0197zhlhrD
+\unrestrict Tc9qcj32YJfLj7kL6E05Ko63MqRCSnuMyYpkfSiYyvzL5jffx1Jkqt87HqVim0t
 
