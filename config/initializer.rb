@@ -5,6 +5,7 @@ Sequel.default_timezone = :utc
 
 Sequel::Database.extension :pagination
 Sequel::Database.extension :pg_json
+Sequel::Database.extension :pg_array
 Sequel::Database.extension :server_block
 Sequel::Database.extension :server_logging
 

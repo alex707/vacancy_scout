@@ -57,10 +57,9 @@ RSpec.describe Vacancies::Create do
         expect(record.salary_from).to eq params[:salary_range][:from]
         expect(record.salary_to).to eq params[:salary_range][:to]
         expect(record.salary_currency).to eq params[:salary_range][:currency]
-
-        # expect(record.work_format).to eq params[:work_format].map{_1[:id]}
-        # expect(record.professional_roles).to eq params[:work_format].map{_1[:name]}
-        # expect(record.key_skills).to eq params[:key_skills].map{_1[:name]}
+        expect(record.work_format).to eq params[:work_format].map{ _1[:id] }
+        expect(record.professional_roles).to eq params[:professional_roles].map{ _1[:name] }
+        expect(record.key_skills).to eq params[:key_skills].map{ _1[:name] }
       end
     end
   end

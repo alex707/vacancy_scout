@@ -13,14 +13,13 @@ class Vacancies::Create
 
     attrs[:experience] = attrs[:experience][:id]
     attrs[:employment_form] = attrs[:employment_form][:id]
-    attrs[:key_skills] = Array(attrs[:key_skills].map{_1[:name]})
-    attrs[:work_format] = Array(attrs[:work_format].map{_1[:id]})
-    attrs[:professional_roles] = Array(attrs[:professional_roles].map{_1[:name]})
+    attrs[:key_skills] = Array(attrs[:key_skills].map{ _1[:name] })
+    attrs[:work_format] = Array(attrs[:work_format].map{ _1[:id] })
+    attrs[:professional_roles] = Array(attrs[:professional_roles].map{ _1[:name] })
     attrs[:created_at] = Time.now
     attrs[:updated_at] = Time.now
 
-    # attrs.slice!(*%i[employer_id hhru_id name description area experience employment_form salary_from salary_to salary_currency work_format professional_roles key_skills created_at updated_at])
-    attrs.slice!(*%i[employer_id hhru_id name description area experience employment_form salary_from salary_to salary_currency created_at updated_at])
+    attrs.slice!(*%i[employer_id hhru_id name description area experience employment_form salary_from salary_to salary_currency work_format professional_roles key_skills created_at updated_at])
 
     @attrs = attrs
   end
