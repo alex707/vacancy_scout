@@ -11,11 +11,11 @@ RSpec.describe HeadHunterClient do
         {
           status: 200,
           body: {
-            "id": "2473411",
-            "name": "Компания",
-            "description": "Компания",
-            "site_url": "http://company.ru",
-            "open_vacancies": 3
+            "id" => "2473411",
+            "name" => "Компания",
+            "description" => "Компания",
+            "site_url" => "http://company.ru",
+            "open_vacancies" => 3
           }.to_json
         }
       )
@@ -41,32 +41,32 @@ RSpec.describe HeadHunterClient do
         {
           status: 200,
           body: {
-            "id": "124463410",
-            "name": "Android разработчик",
-            "area": {"name": "Москва"},
-            "salary_range": {
-              "from": 130000,
-              "to": 150000,
-              "currency": "RUR"
+            "id" => "124463410",
+            "name" => "Android разработчик",
+            "area" => {"name" => "Москва"},
+            "salary_range" => {
+              "from" => 130000,
+              "to" => 150000,
+              "currency" => "RUR"
             },
-            "experience": {"id": "between1And3"},
-            "description": "\u003Cp\u003EЗанимаемся разработкой мобильных приложений",
-            "key_skills": [
-              {"name": "Git"},
-              {"name": "Kotlin"}
+            "experience" => {"id" => "between1And3"},
+            "description" => "\u003Cp\u003EЗанимаемся разработкой мобильных приложений",
+            "key_skills" => [
+              {"name" => "Git"},
+              {"name" => "Kotlin"}
             ],
-            "professional_roles": [
+            "professional_roles" => [
               {
-                "id": "96",
-                "name": "Программист, разработчик"
+                "id" => "96",
+                "name" => "Программист, разработчик"
               }
             ],
-            "employer": {"id": "2473411"},
-            "published_at": "2025-08-26T00:36:51+0300",
-            "created_at": "2025-08-26T00:36:51+0300",
-            "employment_form": {"id": "FULL"},
-            "work_format": [
-              {"id": "REMOTE"}
+            "employer" => {"id" => "2473411"},
+            "published_at" => "2025-08-26T00:36:51+0300",
+            "created_at" => "2025-08-26T00:36:51+0300",
+            "employment_form" => {"id" => "FULL"},
+            "work_format" => [
+              {"id" => "REMOTE"}
             ]
           }.to_json
         }
