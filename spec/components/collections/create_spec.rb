@@ -6,8 +6,8 @@ RSpec.describe Collections::Create do
   describe '#call' do
     let(:params) {
       {
-        "name": "ruby",
-        "parameters": {
+        "name" => "ruby",
+        "parameters" => {
           "text" => "ruby"
         }
       }
@@ -20,8 +20,8 @@ RSpec.describe Collections::Create do
     it 'create employer' do
       record = described_class.new(**params).call
 
-      expect(record.name).to eq params[:name]
-      expect(record.parameters).to eq params[:parameters]
+      expect(record.name).to eq params['name']
+      expect(record.parameters).to eq params['parameters']
     end
   end
 end
