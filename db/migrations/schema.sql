@@ -2,9 +2,9 @@
 -- PostgreSQL database dump
 --
 
-\restrict 2W41raKqBN0b5EkGkfOmGTqUGOqpGgchzXO677Yvx2nz40jEPXRxBKPWQ4EPdbC
+\restrict mc7URHwJBAwBhckvFmrfq7Qe2KJO1FLqnmuPvIfDwv3hGdwDdxhyySgdIJ4tmhT
 
--- Dumped from database version 14.11 (Homebrew)
+-- Dumped from database version 14.19 (Homebrew)
 -- Dumped by pg_dump version 16.10 (Homebrew)
 
 SET statement_timeout = 0;
@@ -170,7 +170,7 @@ CREATE UNIQUE INDEX vacancies_hhru_id_index ON public.vacancies USING btree (hhr
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 2W41raKqBN0b5EkGkfOmGTqUGOqpGgchzXO677Yvx2nz40jEPXRxBKPWQ4EPdbC
+\unrestrict mc7URHwJBAwBhckvFmrfq7Qe2KJO1FLqnmuPvIfDwv3hGdwDdxhyySgdIJ4tmhT
 
 
 
@@ -178,9 +178,9 @@ CREATE UNIQUE INDEX vacancies_hhru_id_index ON public.vacancies USING btree (hhr
 -- PostgreSQL database dump
 --
 
-\restrict Tc9qcj32YJfLj7kL6E05Ko63MqRCSnuMyYpkfSiYyvzL5jffx1Jkqt87HqVim0t
+\restrict PqVVDwlAm8qWaaLyqW6MAtBBvvyybl0KOFo3PpyPTsUwNdOLkgqTYU50irm5Kjp
 
--- Dumped from database version 14.11 (Homebrew)
+-- Dumped from database version 14.19 (Homebrew)
 -- Dumped by pg_dump version 16.10 (Homebrew)
 
 SET statement_timeout = 0;
@@ -206,5 +206,5 @@ INSERT INTO public.schema_migrations VALUES ('20250915150552_create_vacancies.rb
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Tc9qcj32YJfLj7kL6E05Ko63MqRCSnuMyYpkfSiYyvzL5jffx1Jkqt87HqVim0t
+\unrestrict PqVVDwlAm8qWaaLyqW6MAtBBvvyybl0KOFo3PpyPTsUwNdOLkgqTYU50irm5Kjp
 

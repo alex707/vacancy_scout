@@ -23,14 +23,14 @@ RSpec.describe Employers::Create do
     end
 
     it 'create employer' do
-      res = described_class.new(**params).call
+      record = described_class.new(**params).call
 
-      expect(res.hhru_id).to eq params[:id].to_i
-      expect(res.name).to eq params[:name]
-      expect(res.description).to eq params[:description]
-      expect(res.site_url).to eq params[:site_url]
-      expect(res.area).to eq params[:area][:name]
-      expect(res.industry_type).to eq params[:industries].first[:name]
+      expect(record.hhru_id).to eq params[:id].to_i
+      expect(record.name).to eq params[:name]
+      expect(record.description).to eq params[:description]
+      expect(record.site_url).to eq params[:site_url]
+      expect(record.area).to eq params[:area][:name]
+      expect(record.industry_type).to eq params[:industries].first[:name]
     end
   end
 end

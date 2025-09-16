@@ -32,4 +32,6 @@ end
 
 group :test do
   gem 'database_cleaner-sequel'
+
+  gem 'factory_bot'
 end
