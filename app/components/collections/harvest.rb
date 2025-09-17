@@ -21,7 +21,9 @@ class Collections::Harvest
       response['items'].each do |vacancy_data|
         vacancy = Vacancies::FindOrCreate.new(vacancy_data).call
 
-        CollectionVacancy.create(vacancy: vacancy, collection: collection)
+        unless CollectionVacancy.where(vacancy_id: vacancy.id, collection_id: collection.id).any?
+          CollectionVacancy.create(vacancy: vacancy, collection: collection)
+        end
       end
 
       query_params['page'] = current_page + 1
