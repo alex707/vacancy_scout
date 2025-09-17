@@ -8,7 +8,11 @@ class Collections::ShowVacancies
 
     collection.vacancies.map do |vacancy|
       employer = vacancy.employer
-      {vacancy_name: vacancy.name, employer_name: employer.name}
+      {
+        vacancy_name: vacancy.name,
+        employer_name: employer.name,
+        employer_industry_type: employer.industry_type
+      }
     end
   end
 end
