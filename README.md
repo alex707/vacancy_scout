@@ -11,6 +11,7 @@ bot for checking of vacs
 `rake "db:new_migration[create_employers]"`
 `rake "db:new_migration[create_vacancies]"`
 `rake "db:new_migration[create_collections]"`
+`rake "db:new_migration[create_collection_vacancies]"`
 
 `rake db:migrate RACK_ENV=test`
 `rake db:migrate RACK_ENV=development`

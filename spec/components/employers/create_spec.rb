@@ -19,7 +19,7 @@ RSpec.describe Employers::Create do
     }
 
     it 'create only one employer' do
-      expect { described_class.new(**params).call}.to change { Employer.count }.by(1)
+      expect { described_class.new(**params).call }.to change { Employer.count }.by(1)
     end
 
     it 'create employer' do

@@ -14,7 +14,7 @@ RSpec.describe Collections::Create do
     }
 
     it 'create only one employer' do
-      expect { described_class.new(**params).call}.to change { Collection.count }.by(1)
+      expect { described_class.new(**params).call }.to change { Collection.count }.by(1)
     end
 
     it 'create employer' do

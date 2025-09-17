@@ -25,10 +25,10 @@ class Vacancies::Create
   end
 
   def call
-    employer = Vacancy.new(**@attrs)
+    vacancy = Vacancy.new(**@attrs)
 
-    employer.save
+    vacancy.save
 
-    employer
+    vacancy
   end
 end

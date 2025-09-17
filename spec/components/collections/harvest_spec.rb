@@ -31,9 +31,16 @@ RSpec.describe Collections::Harvest do
         allow_any_instance_of(HeadHunterClient).to receive(:get_vacancies_data).with({'text' => 'ruby', 'page' => 1}).and_return(page1_response)
       end
 
-      it 'not create any objects' do
-        expect { described_class.new(collection.id).call}.to_not change { Vacancy.count }
-        expect { described_class.new(collection.id).call}.to_not change { Employer.count }
+      it 'not create any vacancy objects' do
+        expect { described_class.new(collection.id).call }.to_not change { Vacancy.count }
+      end
+
+      it 'not create any employer objects' do
+        expect { described_class.new(collection.id).call }.to_not change { Employer.count }
+      end
+
+      it 'creates caollection_vacancies objects' do
+        expect { described_class.new(collection.id).call }.to change { CollectionVacancy.count }.by(2)
       end
     end
   end

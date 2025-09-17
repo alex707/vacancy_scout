@@ -6,6 +6,9 @@ class Collections::ShowVacancies
   def call
     collection = Collection[@collection_id]
 
-    collection.vacancies.inlcludes(:emplyers)
+    collection.vacancies.map do |vacancy|
+      employer = vacancy.employer
+      {vacancy_name: vacancy.name, employer_name: employer.name}
+    end
   end
 end

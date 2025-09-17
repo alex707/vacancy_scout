@@ -19,7 +19,9 @@ class Collections::Harvest
     puts "\ncollection_id: #{collection.id}, query_params: #{query_params}"
     (0...@pages).to_a.each do |current_page|
       response['items'].each do |vacancy_data|
-        Vacancies::FindOrCreate.new(vacancy_data).call
+        vacancy = Vacancies::FindOrCreate.new(vacancy_data).call
+
+        CollectionVacancy.create(vacancy: vacancy, collection: collection)
       end
 
       query_params['page'] = current_page + 1

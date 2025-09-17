@@ -41,7 +41,7 @@ RSpec.describe Vacancies::Create do
       }
 
       it 'create only one vacancy' do
-        expect { described_class.new(**params).call}.to change { Vacancy.count }.by(1)
+        expect { described_class.new(**params).call }.to change { Vacancy.count }.by(1)
       end
 
       it 'create employer' do
